@@ -52,21 +52,25 @@ const reverse = function(str) {
 };
 reverse("abcd");
 
-g = function(size, mark){
-	if(size === 0)
-		return "";
-	if(mark === 0)
-		return " *" + g(size - 1, mark);	
+const g = function(size, mark) {
+	if(size === 0) {
+           return "";
+        }
+	if(mark === 0) {
+		return " *" + g(size - 1, mark);
+        }	
 	return "* " + g(size - 1, mark);	
 };
-f = function(size, line){	
-	if(line > size )
-        return "";
+const f = function(size, line) {	
+	if(line > size ) {
+		return "";
+        }
 	return g(size, line % 2) + "\n" + f(size, line + 1);
 };
-checkerboard = function(size){
-	if(size <= 0)
-		return "size....";
+const checkerboard = function(size) {
+	if(size <= 0) {
+           return "size...."; 
+}
 	return f(size, 1);
 };
 checkerboard(5);
