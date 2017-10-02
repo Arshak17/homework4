@@ -71,7 +71,7 @@ const checkerboard = function(size) {
 	return g(size, line % 2) + "\n" + f(size, line + 1);
 };
               if(size <= 0) {
-                 return "size...."; 
+                 return ""; 
 }
 	return f(size, 1);
 };
