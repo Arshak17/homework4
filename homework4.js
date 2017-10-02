@@ -39,15 +39,12 @@ const reverse = function(str) {
 		if(length === 1 ) {
 			return str[0];
                 }
+                if(str === "") {
+		return "";
+                }
 		return str[length-1] + f(str, length -1);
 		
 	};
-	if(str === "") {
-		return "";
-                }
-	if(str.length === 1) {
-		return str;
-                }
 	return f(str, str.length); 
 };
 reverse("abcd");
