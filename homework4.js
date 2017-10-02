@@ -61,9 +61,7 @@ g = function(size, mark){
 };
 f = function(size, line){	
 	if(line > size )
-		return "";
-	console.log(g(size, line % 2) + "\n");
-	console.log( line % 2 +  "\n" + line + size);
+        return "";
 	return g(size, line % 2) + "\n" + f(size, line + 1);
 };
 checkerboard = function(size){
