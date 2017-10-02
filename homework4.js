@@ -23,31 +23,34 @@ const triangleStars = function(h) {
 
 triangleStars(5);
 
-pow = function(base, n){
-	if(n < 1 || base < 1)
+const pow = function(base, n) {
+	if(n < 1 || base < 1) {
 		return ;
-	if(n === 1) 
+        }
+	if(n === 1) {
 		return base;
+        }
 	return base * pow(base, n-1);	
-}
+};
 pow(2,3);
 
-
-reverse = function(str){
-	f = function(str, length){
-		if(length === 1 )
+const reverse = function(str) {
+	const f = function(str, length) {
+		if(length === 1 ) {
 			return str[0];
+                }
 		return str[length-1] + f(str, length -1);
 		
 	};
-	if(str === "")
+	if(str === "") {
 		return "";
-	if(str.length === 1)
+                }
+	if(str.length === 1) {
 		return str;
+                }
 	return f(str, str.length); 
 };
 reverse("abcd");
-
 
 g = function(size, mark){
 	if(size === 0)
