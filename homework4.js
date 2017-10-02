@@ -52,7 +52,8 @@ const reverse = function(str) {
 };
 reverse("abcd");
 
-const g = function(size, mark) {
+const checkerboard = function(size) {
+	const g = function(size, mark) {
 	if(size === 0) {
            return "";
         }
@@ -67,8 +68,7 @@ const f = function(size, line) {
         }
 	return g(size, line % 2) + "\n" + f(size, line + 1);
 };
-const checkerboard = function(size) {
-	if(size <= 0) {
+if(size <= 0) {
            return "size...."; 
 }
 	return f(size, 1);
