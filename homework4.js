@@ -1,19 +1,23 @@
-triangleStars = function(h) {
-	f = function(starCount,spaceCount){
-		g = function(n, s) {
-			if( n === 0 )
+const triangleStars = function(h) {
+	const f = function(starCount,spaceCount){
+		const g = function(n, s) {
+			if( n === 0 ) {
 				return "";
-			if( n === 1)
+                }
+			if( n === 1) {
 				return s;
+                }
 			return s + g(n-1,s);
 		};
 
-		if(starCount === 1)
+		if(starCount === 1) {
 			return g(spaceCount, " ") + "*" +g(spaceCount, " ");
+                }
 		return g(spaceCount, " ") + g(starCount , "*") + g(spaceCount, " ") + "\n" + f(starCount-2,spaceCount+1);
 	};
-  if(h <= 0)
+  if(h <= 0) {
 	  return "";
+}
   return f(2*h-1, 0);
 };
 
