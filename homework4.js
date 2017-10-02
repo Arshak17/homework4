@@ -42,7 +42,7 @@ const reverse = function(str) {
                 if(str === "") {
 		return "";
                 }
-		return str[length-1] + f(str, length -1);
+		return str[length-1] + f(str, length-1);
 		
 	};
 	return f(str, str.length); 
