@@ -23,6 +23,7 @@ const triangleStars = function(h) {
 
 triangleStars(5);
 
+
 const pow = function(base, n) {
 	if(n < 1 || base < 1) {
 		return ;
@@ -32,7 +33,9 @@ const pow = function(base, n) {
         }
 	return base * pow(base, n-1);	
 };
+
 pow(2,3);
+
 
 const reverse = function(str) {
 	const f = function(str, length) {
@@ -47,27 +50,30 @@ const reverse = function(str) {
 	};
 	return f(str, str.length); 
 };
+
 reverse("abcd");
+
 
 const checkerboard = function(size) {
 	const g = function(size, mark) {
-	if(size === 0) {
-           return "";
+	      if(size === 0) {
+                 return "";
         }
-	if(mark === 0) {
-		return " *" + g(size - 1, mark);
+	      if(mark === 0) {
+		 return " *" + g(size - 1, mark);
         }	
 	return "* " + g(size - 1, mark);	
 };
-const f = function(size, line) {	
-	if(line > size ) {
-		return "";
+        const f = function(size, line) {	
+	      if(line > size ) {
+		 return "";
         }
 	return g(size, line % 2) + "\n" + f(size, line + 1);
 };
-if(size <= 0) {
-           return "size...."; 
+              if(size <= 0) {
+                 return "size...."; 
 }
 	return f(size, 1);
 };
+
 checkerboard(5);
