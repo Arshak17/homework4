@@ -65,7 +65,6 @@ f = function(size, line){
 	return g(size, line % 2) + "\n" + f(size, line + 1);
 };
 checkerboard = function(size){
-	debugger;
 	if(size <= 0)
 		return "size....";
 	return f(size, 1);
